@@ -13,18 +13,6 @@ f = open("dump.rdf", "rb")
 store.bulk_load(f, format=RdfFormat.TURTLE)
 
 q = (
-    "PREFIX schema: <http://schema.org/>"
-    "SELECT ?entity ?version ?modified"
-    "WHERE {"
-    "  ?entity a schema:Dataset ;"
-    "          schema:version ?version ;"
-    "          schema:dateModified ?modified ."
-    "}"
-    "LIMIT 10"
-)
-
-
-q = (
     "PREFIX wikibase: <http://wikiba.se/ontology#> "
     "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> "
     "SELECT ?property ?propertyLabel "
@@ -36,8 +24,7 @@ q = (
     "LIMIT 100 "
 )
 
-print(q)
-
+# print(q)
 
 start = time.perf_counter()
 result = store.query(q)

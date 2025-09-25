@@ -1,0 +1,4 @@
+backends:
+  local:
+    endpoint: "http://Georges-Mac-mini.local:7041"
+    title: "Local QLever Endpoint"
