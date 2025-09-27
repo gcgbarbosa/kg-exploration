@@ -172,3 +172,37 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+.ui-db.sqlite3
+dump.hdt
+dump.hdt.index.v1-1
+dump.rdf
+dump.ttl
+vvz.index-log.txt
+vvz.index.ops
+vvz.index.ops.meta
+vvz.index.osp
+vvz.index.osp.meta
+vvz.index.patterns
+vvz.index.pos
+vvz.index.pos.meta
+vvz.index.pso
+vvz.index.pso.meta
+vvz.index.sop
+vvz.index.sop.meta
+vvz.index.spo
+vvz.index.spo.meta
+vvz.internal.index.pos
+vvz.internal.index.pos.meta
+vvz.internal.index.pso
+vvz.internal.index.pso.meta
+vvz.meta-data.json
+vvz.server-log.txt
+vvz.settings.json
+vvz.text.index
+vvz.text.vocabulary
+vvz.ui-db.sqlite3
+vvz.vocabulary.codebooks
+vvz.vocabulary.words.external
+vvz.vocabulary.words.external.offsets
+vvz.vocabulary.words.internal
+vvz.vocabulary.words.internal.ids

@@ -1,14 +1,17 @@
 """
-qlever test
+HDT test
+
 """
 
-from SPARQLWrapper import SPARQLWrapper, JSON
+from rdflib import Graph
+from rdflib_hdt import HDTStore, optimize_sparql
 
 import time
 
-endpoint = "http://localhost:7041"
-endpoint = "http://localhost:9999/bigdata/sparql"
+# Calling this function optimizes the RDFlib SPARQL engine for HDT documents
+optimize_sparql()
 
+graph = Graph(store=HDTStore("dump.hdt"))
 
 q = (
     "PREFIX wikibase: <http://wikiba.se/ontology#> "
@@ -22,19 +25,17 @@ q = (
     "LIMIT 100 "
 )
 
-sparql = SPARQLWrapper(endpoint)
-
-
 start = time.perf_counter()
 
-sparql.setQuery(q)
+# You can execute SPARQL queries using the regular RDFlib API
+qres = graph.query(q)
 
-sparql.setReturnFormat(JSON)
-results = sparql.query().convert()
-for result in results["results"]["bindings"]:
-    print(result)
+for row in qres:
+    print(row)
+
 
 end = time.perf_counter()
 elapsed_ms = (end - start) * 1000  # convert seconds → milliseconds
+
 
 print(f"Elapsed time: {elapsed_ms:.3f} ms")

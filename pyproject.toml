@@ -8,6 +8,7 @@ dependencies = [
     "loguru>=0.7.3",
     "pyoxigraph>=0.4.11",
     "qlever>=0.5.24",
+    "rdflib-hdt>=3.1",
     "sparqlwrapper>=2.0.0",
 ]
 

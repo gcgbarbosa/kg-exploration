@@ -537,6 +537,15 @@ wheels = [
 ]
 
 [[package]]
+name = "pybind11"
+version = "3.0.1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/2f/7b/a6d8dcb83c457e24a9df1e4d8fd5fb8034d4bbc62f3c324681e8a9ba57c2/pybind11-3.0.1.tar.gz", hash = "sha256:9c0f40056a016da59bab516efb523089139fcc6f2ba7e4930854c61efb932051", size = 546914, upload-time = "2025-08-22T20:09:27.265Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/cd/8a/37362fc2b949d5f733a8b0f2ff51ba423914cabefe69f1d1b6aab710f5fe/pybind11-3.0.1-py3-none-any.whl", hash = "sha256:aa8f0aa6e0a94d3b64adfc38f560f33f15e589be2175e103c0a33c6bce55ee89", size = 293611, upload-time = "2025-08-22T20:09:25.235Z" },
+]
+
+[[package]]
 name = "pycparser"
 version = "2.22"
 source = { registry = "https://pypi.org/simple" }
@@ -689,6 +698,16 @@ wheels = [
 ]
 
 [[package]]
+name = "rdflib-hdt"
+version = "3.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "pybind11" },
+    { name = "rdflib" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/ea/11/f83aedf9517a20fe10fbd2e1ccd147760322b8cce36eac9efedb8b3783be/rdflib_hdt-3.1.tar.gz", hash = "sha256:0db95fe58e276fe58668cae6ef94dd7b7b30bf1e9f89dd06d3941208a17fcc44", size = 235883, upload-time = "2023-06-02T12:22:02.609Z" }
+
+[[package]]
 name = "requests"
 version = "2.32.5"
 source = { registry = "https://pypi.org/simple" }
@@ -803,6 +822,7 @@ dependencies = [
     { name = "loguru" },
     { name = "pyoxigraph" },
     { name = "qlever" },
+    { name = "rdflib-hdt" },
     { name = "sparqlwrapper" },
 ]
 
@@ -824,6 +844,7 @@ requires-dist = [
     { name = "loguru", specifier = ">=0.7.3" },
     { name = "pyoxigraph", specifier = ">=0.4.11" },
     { name = "qlever", specifier = ">=0.5.24" },
+    { name = "rdflib-hdt", specifier = ">=3.1" },
     { name = "sparqlwrapper", specifier = ">=2.0.0" },
 ]
 
